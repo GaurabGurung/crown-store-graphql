@@ -28,15 +28,6 @@ export const CategoriesProvider = ({ children }) => {
   console.log("loading", loading);
   console.log(data);
 
-  // useEffect(() => {
-  //   const getCategoriesMap = async () => {
-  //     const categoryMap = await getCategoriesAndDocuments();
-  //     setCategoriesMap(categoryMap);
-  //   };
-
-  //   getCategoriesMap();
-  // }, []);
-
   const value = { categoriesMap };
   return (
     <CategoriesContext.Provider value={value}>
