@@ -12,7 +12,7 @@ import "./index.scss";
 
 const client = new ApolloClient({
   uri: "https://crwn-clothing.com/", //GraphQL server or in this case the playground which is the server entry point
-  cache: new InMemoryCache(), //it helps you top cache the requested value
+  cache: new InMemoryCache(), //it helps you to cache the requested value
 });
 
 const rootElement = document.getElementById("root");
