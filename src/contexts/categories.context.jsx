@@ -31,7 +31,7 @@ export const CategoriesProvider = ({ children }) => {
       const { collections } = data;
       const collectionsMap = collections.reduce((acc, collection) => {
         const { title, items } = collection;
-        acc[title.toLowerCase] = items;
+        acc[title.toLowerCase()] = items;
         return acc;
       }, {});
 
@@ -39,10 +39,7 @@ export const CategoriesProvider = ({ children }) => {
     }
   }, [data]);
 
-  console.log("loading", loading);
-  console.log(data);
-
-  const value = { categoriesMap };
+  const value = { categoriesMap, loading };
   return (
     <CategoriesContext.Provider value={value}>
       {children}
